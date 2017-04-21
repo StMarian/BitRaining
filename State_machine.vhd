@@ -60,20 +60,18 @@ begin
 					IS_DEC <= '0';
 					TEXT_OUT <= sel_lv;
 					
-					if KEYS'stable(100ms) then
-						case KEYS is	
-							when "001" => 
-								state <= IN_GAME;
-								generatedNumber := RANDOM_NUMBER and level_masks(0);
-							when "010" => 
-								state <= IN_GAME; 
-								generatedNumber := RANDOM_NUMBER and level_masks(1);
-							when "100" =>
-								state <= IN_GAME;
-								generatedNumber := RANDOM_NUMBER and level_masks(2);  
-							when others => null;
-						end case;						
-					end if;
+					case KEYS is	
+						when "001" => 
+							state <= IN_GAME;
+							generatedNumber := RANDOM_NUMBER and level_masks(0);
+						when "010" => 
+							state <= IN_GAME; 
+							generatedNumber := RANDOM_NUMBER and level_masks(1);
+						when "100" =>
+							state <= IN_GAME;
+							generatedNumber := RANDOM_NUMBER and level_masks(2);  
+						when others => null;
+					end case;	
 					
 				--====================================================================================================
 				when IN_GAME =>
@@ -89,8 +87,6 @@ begin
 					
 					IS_DEC <= '0';
 					TEXT_OUT <= succes;
-					if KEYS = "111" then
-						state <= SELECT_LEVEL;
 					end if;
 					
 				--====================================================================================================
