@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 --
 -- Title       : top_game
--- Design      : game_1
+-- Design      : BitRaining
 --
 -------------------------------------------------------------------------------
 --
@@ -67,7 +67,7 @@ begin
 	RNG : random
 	port map (CLK, generatedNumber);
 	
-	FO : form_output_v2
+	FO : form_output
 	port map (CLK, DEC_OUT, IS_DEC, TEXT_OUT, FORMAT_OUT);
 	
 end top_game;
