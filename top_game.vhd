@@ -44,7 +44,7 @@ architecture top_game of top_game is
 		);
 	end component;			
 	
-	component form_output_v2
+	component form_output
 		port(
 		CLK : in STD_LOGIC;
 		DEC_OUT : in std_logic_vector (16 downto 0);
