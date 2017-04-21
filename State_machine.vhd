@@ -2,8 +2,6 @@
 --
 -- Title       : State_machine
 -- Design      : game_1
--- Author      : Kp0c
--- Company     : SYGMA. Inc
 --
 -------------------------------------------------------------------------------
 --
@@ -59,7 +57,6 @@ begin
 					
 					IS_DEC <= '0';
 					TEXT_OUT <= sel_lv;
-					
 					case KEYS is	
 						when "001" => 
 							state <= IN_GAME;
@@ -87,7 +84,6 @@ begin
 					
 					IS_DEC <= '0';
 					TEXT_OUT <= succes;
-					end if;
 					
 				--====================================================================================================
 				when OTHERS => null;
