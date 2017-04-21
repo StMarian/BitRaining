@@ -13,7 +13,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 
-entity form_output_v2 is
+entity form_output is
 	port(
 		CLK : in STD_LOGIC;
 		IS_DEC : in STD_LOGIC;
@@ -21,9 +21,9 @@ entity form_output_v2 is
 		TEXT_OUT : in STD_LOGIC_VECTOR(41 downto 0);
 		FORMAT_OUT : out STD_LOGIC_VECTOR(41 downto 0)
 		);
-end form_output_v2;
+end form_output;
 
-architecture behavioral of form_output_v2 is
+architecture behavioral of form_output is
 	
 	--types
 	type intArr is array (6 downto 0) of integer;
